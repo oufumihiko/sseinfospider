@@ -1,13 +1,12 @@
 import requests, json
 
-# security_code = input("Enter the security code:")
-# page_wanted = int(input("How many page you want:")) + 1
+security_code = input("Enter the security code:")
+page_wanted = int(input("How many page you want:")) + 1
 merged = []
 
 def getJsonByPage(page_wanted):
 #     # 按页获取数据并保存为json文件
 #     #TODO: 1.不生成json临时文件
-    
     for page_no in range(1,page_wanted):
         endPage = page_no * 10
         beginPage = endPage - 9
@@ -35,7 +34,7 @@ def dataMerger(pagetomerge):
 def converToCsv():
     pass
 
-# getJsonByPage(page_wanted)
+getJsonByPage(page_wanted)
 
 
 for i in range(1,page_wanted):
